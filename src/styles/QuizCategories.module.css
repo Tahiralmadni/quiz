@@ -1,0 +1,358 @@
+.categoriesContainer {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.categoriesContainer h1 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.categoriesContainer h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #4299e1;
+  border-radius: 2px;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  padding: 2rem;
+}
+
+.categoryCard {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 2px solid #4299e1;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.1);
+}
+
+.categoryCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #4299e1;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.categoryCard:hover::before {
+  transform: scaleX(1);
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+}
+
+.hotLabel {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: linear-gradient(45deg, #ff4d4d, #ff8080);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  animation: pulse 2s infinite;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(255, 77, 77, 0.3);
+}
+
+.categoryIconWrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.categoryIcon {
+  font-size: 4rem;
+  color: #4299e1;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.categoryCard:hover .categoryIcon {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hotIcon {
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+.categoryCard h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.categoryCard p {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.difficultySection {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: linear-gradient(145deg, var(--card-bg), var(--background-color));
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.difficultySection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 45%, #4299e1 45%, #4299e1 55%, transparent 55%);
+  opacity: 0.1;
+}
+
+.difficultyGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.difficultyCard {
+  flex: 1;
+  max-width: 300px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  border: 2px solid #4299e1;
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.difficultyCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(52, 152, 219, 0.1),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.difficultyCard:hover::before {
+  transform: translateX(100%);
+}
+
+.difficultyCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4299e1, #63b3ed);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.difficultyCard:hover::after {
+  transform: scaleX(1);
+}
+
+.difficultyCard:hover {
+  transform: translateY(-10px);
+}
+
+.difficultyCard.selected {
+  background: linear-gradient(145deg, var(--card-bg), rgba(52, 152, 219, 0.1));
+  border: 2px solid #4299e1;
+}
+
+.difficultyCard h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
+}
+
+.difficultyCard h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #4299e1;
+  border-radius: 2px;
+}
+
+.questionCount {
+  margin-top: auto;
+  padding: 1rem;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 15px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.difficultyCard:hover .questionCount {
+  transform: translateY(-5px);
+}
+
+.questionCount small {
+  color: #4299e1;
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .difficultyGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .difficultyCard {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.startQuizButton {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 4rem auto 2rem;
+  padding: 1.2rem 2.5rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.2);
+}
+
+.startQuizButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.startQuizButton:hover::before {
+  left: 100%;
+}
+
+.startQuizButton:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.3);
+}
+
+@media (max-width: 768px) {
+  .categoriesContainer {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+
+  .categoriesContainer h1 {
+    font-size: 2.5rem;
+  }
+
+  .categoriesGrid {
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .difficultyGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .startQuizButton {
+    max-width: 100%;
+    margin: 3rem auto 1rem;
+  }
+}

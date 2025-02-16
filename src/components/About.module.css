@@ -1,0 +1,167 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6f0ff 0%, #ffffff 100%);
+}
+
+.aboutContent {
+  flex: 1;
+  padding: 50px 5%;
+  text-align: center;
+}
+
+.aboutContent h1 {
+  color: #0047ab;
+  margin-bottom: 40px;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 71, 171, 0.1);
+  position: relative;
+}
+
+.aboutContent h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #0047ab, #4169e1);
+  border-radius: 2px;
+}
+
+.missionSection, 
+.featuresSection, 
+.platformSection,
+.methodologySection,
+.futureSection {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 71, 171, 0.1);
+  border: 2px solid #e6f0ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.missionSection::before,
+.featuresSection::before,
+.platformSection::before,
+.methodologySection::before,
+.futureSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #0047ab, #4169e1);
+}
+
+.missionSection h2,
+.featuresSection h2,
+.platformSection h2,
+.methodologySection h2,
+.futureSection h2 {
+  color: #0047ab;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.missionSection p {
+  color: #0047ab;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.featureGrid,
+.excellenceGrid,
+.methodGrid,
+.futureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.feature,
+.excellenceItem,
+.methodItem,
+.futureItem {
+  background: linear-gradient(145deg, #ffffff, #f0f8ff);
+  padding: 30px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid #e6f0ff;
+  position: relative;
+}
+
+.feature:hover,
+.excellenceItem:hover,
+.methodItem:hover,
+.futureItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 71, 171, 0.15);
+  background: white;
+  border-color: #0047ab;
+}
+
+.featureIcon,
+.methodIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 20px;
+  color: #0047ab;
+}
+
+.feature h3,
+.excellenceItem h3,
+.methodItem h3,
+.futureItem h3 {
+  color: #0047ab;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.feature p,
+.excellenceItem p,
+.methodItem p,
+.futureItem p {
+  color: #1e3a8a;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.futureSection p {
+  color: #1e3a8a;
+  font-size: 1.2rem;
+  margin: 25px 0;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .aboutContent {
+    padding: 30px 4%;
+  }
+
+  .aboutContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .missionSection, 
+  .featuresSection, 
+  .platformSection,
+  .methodologySection,
+  .futureSection {
+    padding: 25px;
+  }
+
+  .featureGrid,
+  .excellenceGrid,
+  .methodGrid,
+  .futureGrid {
+    grid-template-columns: 1fr;
+  }
+}

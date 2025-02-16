@@ -1,0 +1,126 @@
+:root {
+  --primary-blue: #3498db;
+  --secondary-blue: #2980b9;
+  --light-background: #f4f6f9;
+  --text-dark: #2c3e50;
+  --white: #ffffff;
+  --border-light: #e0e6ed;
+}
+
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--light-background);
+  padding: 2rem 0 0 0;
+}
+
+.faqContent {
+  flex: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+.faqScrollContainer {
+  width: 100%;
+  padding: 0 10% 2rem 10%;
+}
+
+.faqScrollContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.faqScrollContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.faqScrollContainer::-webkit-scrollbar-thumb {
+  background-color: var(--primary-blue);
+  border-radius: 20px;
+}
+
+.faqHeader {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.faqHeader h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faqItem {
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  background-color: var(--light-background);
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: background-color 0.3s ease;
+}
+
+.faqQuestion:hover {
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+.faqAnswer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faqItem.active .faqAnswer {
+  max-height: 500px;
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.toggleIcon {
+  color: var(--primary-blue);
+  transition: transform 0.3s ease;
+}
+
+.faqItem.active .toggleIcon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .faqContent {
+    width: 95%;
+  }
+
+  .faqScrollContainer {
+    padding: 1rem;
+  }
+
+  .faqHeader h1 {
+    font-size: 2rem;
+  }
+}

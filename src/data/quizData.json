@@ -1,0 +1,145 @@
+{
+  "categories": [
+    {
+      "id": "pakistan",
+      "name": "Pakistan",
+      "icon": "🇵🇰",
+      "description": "Test your knowledge about Pakistan's history, culture, and geography",
+      "color": "#006400",
+      "backgroundColor": "#e6f2e6",
+      "textColor": "#004d00",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is the capital of Pakistan?",
+            "options": ["Karachi", "Lahore", "Islamabad", "Rawalpindi"],
+            "correctAnswer": "Islamabad"
+          },
+          {
+            "question": "Which river is the longest in Pakistan?",
+            "options": ["Indus", "Chenab", "Ravi", "Jhelum"],
+            "correctAnswer": "Indus"
+          }
+        ],
+        "medium": [
+          {
+            "question": "In which year did Pakistan gain independence?",
+            "options": ["1945", "1947", "1950", "1942"],
+            "correctAnswer": "1947"
+          },
+          {
+            "question": "Who is known as the founder of Pakistan?",
+            "options": ["Liaquat Ali Khan", "Muhammad Ali Jinnah", "Allama Iqbal", "Zulfikar Ali Bhutto"],
+            "correctAnswer": "Muhammad Ali Jinnah"
+          }
+        ],
+        "hard": [
+          {
+            "question": "Who was the first woman Prime Minister of Pakistan?",
+            "options": ["Benazir Bhutto", "Fatima Jinnah", "Begum Rana Liaquat Ali Khan", "Maryam Nawaz"],
+            "correctAnswer": "Benazir Bhutto"
+          },
+          {
+            "question": "Which mountain range forms part of Pakistan's northern border?",
+            "options": ["Karakoram", "Himalayas", "Hindu Kush", "Pamir Mountains"],
+            "correctAnswer": "Karakoram"
+          }
+        ]
+      }
+    },
+    {
+      "id": "geography",
+      "name": "Pakistan Geography",
+      "icon": "🗺️",
+      "description": "Explore the geographical features of Pakistan",
+      "color": "#1565C0",
+      "textColor": "#000000",
+      "backgroundColor": "#BBD7F0",
+      "questions": {
+        "easy": [
+          {
+            "question": "What is the largest province of Pakistan by area?",
+            "options": ["Sindh", "Punjab", "Balochistan", "Khyber Pakhtunkhwa"],
+            "correctAnswer": "Balochistan"
+          },
+          {
+            "question": "Which sea is located to the south of Pakistan?",
+            "options": ["Red Sea", "Arabian Sea", "Persian Gulf", "Mediterranean Sea"],
+            "correctAnswer": "Arabian Sea"
+          }
+        ],
+        "medium": [
+          {
+            "question": "What is the highest mountain peak in Pakistan?",
+            "options": ["K2", "Nanga Parbat", "Gasherbrum I", "Broad Peak"],
+            "correctAnswer": "K2"
+          },
+          {
+            "question": "Which desert is located in Sindh province?",
+            "options": ["Thar Desert", "Cholistan Desert", "Kharan Desert", "Dasht-e-Kavir"],
+            "correctAnswer": "Thar Desert"
+          }
+        ],
+        "hard": [
+          {
+            "question": "What is the length of Pakistan's coastline?",
+            "options": ["1046 km", "1126 km", "1200 km", "980 km"],
+            "correctAnswer": "1046 km"
+          },
+          {
+            "question": "Which river system is crucial for Pakistan's agriculture?",
+            "options": ["Ganges River System", "Indus River System", "Brahmaputra River System", "Sutlej River System"],
+            "correctAnswer": "Indus River System"
+          }
+        ]
+      }
+    },
+    {
+      "id": "history",
+      "name": "Pakistan History",
+      "icon": "📜",
+      "description": "Dive into the rich historical narrative of Pakistan",
+      "color": "#2196F3",
+      "textColor": "#000000",
+      "backgroundColor": "#90CAF9",
+      "questions": {
+        "easy": [
+          {
+            "question": "In which year was the Pakistan Resolution passed?",
+            "options": ["1940", "1945", "1947", "1935"],
+            "correctAnswer": "1940"
+          },
+          {
+            "question": "Who was the first Governor-General of Pakistan?",
+            "options": ["Liaquat Ali Khan", "Muhammad Ali Jinnah", "Iskander Mirza", "Ayub Khan"],
+            "correctAnswer": "Muhammad Ali Jinnah"
+          }
+        ],
+        "medium": [
+          {
+            "question": "When did Pakistan become a nuclear power?",
+            "options": ["1998", "1988", "2000", "1995"],
+            "correctAnswer": "1998"
+          },
+          {
+            "question": "Who was the first elected Prime Minister of Pakistan?",
+            "options": ["Zulfikar Ali Bhutto", "Liaquat Ali Khan", "Nawaz Sharif", "Benazir Bhutto"],
+            "correctAnswer": "Zulfikar Ali Bhutto"
+          }
+        ],
+        "hard": [
+          {
+            "question": "In which year did the Indo-Pakistani War of 1965 take place?",
+            "options": ["1962", "1965", "1971", "1947"],
+            "correctAnswer": "1965"
+          },
+          {
+            "question": "Who wrote the national anthem of Pakistan?",
+            "options": ["Allama Iqbal", "Muhammad Ali Jinnah", "Abu-ul-Asar Hafeez Jalandhari", "Faiz Ahmed Faiz"],
+            "correctAnswer": "Abu-ul-Asar Hafeez Jalandhari"
+          }
+        ]
+      }
+    }
+  ]
+}

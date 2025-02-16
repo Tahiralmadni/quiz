@@ -1,0 +1,115 @@
+@import '../styles/variables.css';
+
+.settingsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-medium);
+}
+
+.settingsContainer h1 {
+  text-align: center;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+}
+
+.settingsForm {
+  display: grid;
+  gap: 2rem;
+}
+
+.formSection {
+  background: var(--color-background);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-medium);
+}
+
+.formSection h2 {
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="password"],
+.formGroup select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius-small);
+  transition: var(--transition-fast);
+}
+
+.formGroup input[type="text"]:focus,
+.formGroup input[type="email"]:focus,
+.formGroup input[type="password"]:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.errorInput {
+  border-color: var(--color-error);
+}
+
+.errorMessage {
+  color: var(--color-error);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.successMessage {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--color-success);
+  padding: 1rem;
+  border-radius: var(--border-radius-small);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.saveButton {
+  width: 100%;
+  padding: 12px;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-small);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.formGroup input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .settingsContainer {
+    padding: 1rem;
+  }
+
+  .formSection {
+    padding: 1rem;
+  }
+}

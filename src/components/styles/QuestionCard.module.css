@@ -1,0 +1,106 @@
+.questionCard {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .timer {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    position: relative;
+  }
+  
+  .timerBar {
+    height: 4px;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+    border-radius: 2px;
+    transition: width 1s linear;
+    margin-top: 0.5rem;
+  }
+  
+  .questionInfo {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+  }
+  
+  .progressBar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+    transition: width 0.5s ease;
+  }
+  
+  .question {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .optionsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .option {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .option:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #00ffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+  }
+  
+  .option.selected {
+    background: linear-gradient(45deg, #00ffff20, #ff00ff20);
+    border-color: #ff00ff;
+    box-shadow: 0 5px 15px rgba(255, 0, 255, 0.4);
+  }
+  
+  .option:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 600px) {
+    .optionsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .questionCard {
+      margin: 1rem;
+      padding: 1rem;
+    }
+    
+    .question {
+      font-size: 1.2rem;
+    }
+  }

@@ -1,0 +1,52 @@
+.termsContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f7f6;
+}
+
+.termsContent {
+  flex: 1;
+  padding: 50px 10%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.termsContent h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.termsSection {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.termsSection h2 {
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.termsSection p {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.termsList {
+  list-style-type: decimal;
+  padding-left: 30px;
+  color: #34495e;
+}
+
+.acceptanceNote {
+  text-align: center;
+  color: #7f8c8d;
+  margin-top: 30px;
+  font-style: italic;
+}

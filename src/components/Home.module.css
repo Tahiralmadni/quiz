@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #2ecc71;
+  --secondary-color: #3498db;
+  --background-color: #f4f6f9;
+  --text-color: #2c3e50;
+  --accent-color: #34495e;
+  --error-color: #e74c3c;
+}
+
+.homeContainer {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add this to ensure footer keeps its style */
+.homeContainer > *:last-child {
+  background-color: #000000 !important;
+  width: 100%;
+}
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background-color: transparent;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.quizOptions {
+  display: flex;
+  gap: 20px;
+}
+
+.startButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: #27ae60;
+}
+
+.scoreboardButton {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.scoreboardButton:hover {
+  background-color: #2980b9;
+}
+
+.heroImage {
+  flex: 1;
+  text-align: right;
+}
+
+.heroImage img {
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.featuresSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px 10%;
+  background-color: white;
+}
+
+.featureCard {
+  text-align: center;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.featureDescription {
+  color: var(--accent-color);
+}
+
+.statsSection {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 10%;
+  background-color: #f1f3f5;
+}
+
+.statCard {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  width: 200px;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.statLabel {
+  color: var(--accent-color);
+  margin-top: 10px;
+}
+
+.callToActionSection {
+  text-align: center;
+  padding: 50px 10%;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.callToActionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.callToActionDescription {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.callToActionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primaryCta {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.primaryCta:hover {
+  background-color: #27ae60;
+}
+
+.secondaryCta {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.secondaryCta:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .heroSection, .featuresSection {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+
+  .heroImage img {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .featuresSection {
+    grid-template-columns: 1fr;
+  }
+}

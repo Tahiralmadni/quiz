@@ -1,0 +1,128 @@
+.cookieContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f7f6;
+  padding: 2rem 0;
+}
+
+.cookieContent {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.cookieContent h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.cookieSection {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cookieSection h2 {
+  color: #3498db;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.cookieOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.optionDetails h3 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.optionDetails p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggleSwitch .checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.checkbox:checked + .slider {
+  background-color: #2ecc71;
+}
+
+.checkbox:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.cookieActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.saveButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saveButton:hover {
+  background-color: #2980b9;
+}
+
+.disclaimer {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  margin-top: 20px;
+}

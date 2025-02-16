@@ -1,0 +1,213 @@
+.scoreboardContainer {
+  min-height: 100vh;
+  background: #2b6cb0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.scoreboardContent {
+  max-width: 800px;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.scoreList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.scoreList h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.scoreItem {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.scoreItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.scoreCategory {
+  flex: 1;
+}
+
+.scoreDetails {
+  flex: 1;
+  text-align: right;
+}
+
+.scoreValue {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.bestScore {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.bestScore h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.scoreCategory h3 {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 0.8rem;
+}
+
+.difficulty {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.percentage {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.passed {
+  background: rgba(72, 187, 120, 0.2);
+  color: #9ae6b4;
+}
+
+.failed {
+  background: rgba(245, 101, 101, 0.2);
+  color: #feb2b2;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.newQuizButton {
+  display: block;
+  width: 220px;
+  margin: 3rem auto 0;
+  padding: 1.2rem 2rem;
+  background: white;
+  color: #2b6cb0;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.newQuizButton:hover {
+  background: #f7fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.loading {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 3rem;
+}
+
+.noScores {
+  text-align: center;
+  padding: 3rem;
+  color: white;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+  .scoreboardContainer {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .scoreItem {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .scoreDetails {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .scoreValue {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .scoreCategory h3 {
+    font-size: 1.1rem;
+  }
+
+  .percentage {
+    font-size: 1.8rem;
+  }
+}
