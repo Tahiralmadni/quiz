@@ -57,7 +57,7 @@
 }
 
 .navLink:hover {
-  color: var(--primary-color);
+  color: white;
 }
 
 .navLink::after {
@@ -67,7 +67,7 @@
   height: 2px;
   bottom: -5px;
   left: 0;
-  background: var(--gradient-primary);
+  background: white;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }

@@ -61,31 +61,32 @@ const Navbar = () => {
   const iconColor = getColorFromString(currentUser?.displayName || currentUser?.email || 'User');
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navContainer}>
-        <div className={styles.logoSection}>
-          <Link to="/" className={styles.logo}>QuizMaster</Link>
-        </div>
+    <nav style={{backgroundColor:'#1261eb'}} className={styles.navbar}>
+      <div style={{backgroundColor:'#1261eb'}} className={styles.navContainer}>
+      <div style={{backgroundColor:'#1261eb'}} className={styles.logoSection}>
+        <Link style={{backgroundColor:'#1261eb', color: 'white'}} to="/" className={styles.logo}>Quiz App</Link>
+      </div>
 
-        <div className={styles.navLinks}>
-          <Link to="/home" className={styles.navLink}>Home</Link>
-          <Link to="/quiz-dashboard" className={styles.navLink}>
-            Quiz Dashboard
-            {totalQuizzesTaken > 0 && (
-              <span className={styles.quizBadge}>{totalQuizzesTaken}</span>
-            )}
-          </Link>
-          <Link to="/contact" className={styles.navLink}>Contact</Link>
-          <Link to="/about" className={styles.navLink}>About</Link>
-        </div>
+      <div style={{backgroundColor:'#1261eb'}} className={styles.navLinks}>
+        <Link style={{backgroundColor:'#1261eb', color: 'white'}} to="/home" className={styles.navLink}>Home</Link>
+        <Link style={{backgroundColor:'#1261eb', color: 'white'}} to="/quiz-dashboard" className={styles.navLink}>
+        Quiz Dashboard
+        {totalQuizzesTaken > 0 && (
+          <span style={{backgroundColor:'#ff4d4d'}} className={styles.quizBadge}>{totalQuizzesTaken}</span>
+        )}
+        </Link>
+        <Link style={{backgroundColor:'#1261eb', color: 'white'}} to="/contact" className={styles.navLink}>Contact</Link>
+        <Link style={{backgroundColor:'#1261eb', color: 'white'}} to="/about" className={styles.navLink}>About</Link>
+      </div>
 
-        <div className={styles.navAuth}>
-          {currentUser ? (
-            <div className={styles.userInfo}>
-              <div 
-                className={styles.profileSection} 
-                onClick={toggleProfileDropdown}
-              >
+      <div style={{backgroundColor:'#1261eb'}} className={styles.navAuth}>
+        {currentUser ? (
+        <div style={{backgroundColor:'#1261eb'}} className={styles.userInfo}>
+          <div 
+          style={{backgroundColor:'#1261eb'}}
+          className={styles.profileSection} 
+          onClick={toggleProfileDropdown}
+          >
                 {currentUser.photoURL ? (
                   <img 
                     src={currentUser.photoURL} 
@@ -114,9 +115,9 @@ const Navbar = () => {
               )}
             </div>
           ) : (
-            <div className={styles.authButtons}>
-              <Link to="/login" className={styles.loginBtn}>Login</Link>
-              <Link to="/signup" className={styles.signupBtn}>Sign Up</Link>
+            <div style={{backgroundColor:'#1261eb'}} className={styles.authButtons}>
+              <Link style={{backgroundColor:'#1261eb', color: 'white', border: '1px solid white'}} to="/login" className={styles.loginBtn}>Login</Link>
+              <Link style={{backgroundColor:'white', color: '#1261eb'}} to="/signup" className={styles.signupBtn}>Sign Up</Link>
             </div>
           )}
         </div>

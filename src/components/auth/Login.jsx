@@ -4,9 +4,11 @@ import { auth } from '../../firebase';
 import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
 import { showToast } from '../Toast';
 import './Login.css';
+import { useTranslation } from 'react-i18next';
 
 const Login = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -56,13 +58,13 @@ const Login = () => {
 
     // Basic validation
     if (!formData.email.trim()) {
-      setErrors(prev => ({ ...prev, email: 'Email is required' }));
+      setErrors(prev => ({ ...prev, email: t('auth.errors.email_required') }));
       setIsLoading(false);
       return;
     }
 
     if (!formData.password.trim()) {
-      setErrors(prev => ({ ...prev, password: 'Password is required' }));
+      setErrors(prev => ({ ...prev, password: t('auth.errors.password_required') }));
       setIsLoading(false);
       return;
     }
@@ -88,31 +90,31 @@ const Login = () => {
       setIsLoading(false);
       
       // Handle specific Firebase authentication errors
-      switch (error.code) {
+        switch (error.code) {
         case 'auth/invalid-email':
-          setErrors(prev => ({ ...prev, email: 'Invalid email address' }));
+          setErrors(prev => ({ ...prev, email: t('auth.errors.invalid_email') }));
           break;
         case 'auth/user-not-found':
-          setErrors(prev => ({ ...prev, firebase: 'No user found with this email' }));
+          setErrors(prev => ({ ...prev, firebase: t('auth.errors.user_not_found') }));
           break;
         case 'auth/wrong-password':
-          setErrors(prev => ({ ...prev, password: 'Incorrect password' }));
+          setErrors(prev => ({ ...prev, password: t('auth.errors.wrong_password') }));
           break;
         default:
-          setErrors(prev => ({ ...prev, firebase: 'Login failed. Please try again.' }));
+          setErrors(prev => ({ ...prev, firebase: t('auth.errors.login_failed') }));
       }
     }
   };
 
   return (
     <div className="login-container">
-      <form onSubmit={handleSubmit} className="login-form">
-        <h2>Login</h2>
+        <form onSubmit={handleSubmit} className="login-form">
+        <h2>{t('auth.login')}</h2>
         <div className="form-group">
           <input 
-            type="email" 
-            name="email" 
-            placeholder="Email" 
+          type="email" 
+          name="email" 
+          placeholder={t('auth.email')}
             value={formData.email} 
             onChange={handleChange} 
             className={errors.email ? 'error' : ''} 
@@ -124,7 +126,7 @@ const Login = () => {
           <input 
             type="password" 
             name="password" 
-            placeholder="Password" 
+            placeholder={t('auth.password')}
             value={formData.password} 
             onChange={handleChange} 
             className={errors.password ? 'error' : ''} 
@@ -134,13 +136,16 @@ const Login = () => {
         </div>
         {errors.firebase && <div className="firebase-error">{errors.firebase}</div>}
         <button 
+          style={{color:'white'}}
           type="submit" 
           className="login-button" 
           disabled={isLoading}
         >
-          {isLoading ? 'Logging in...' : 'Login'}
-        </button>
-        <p className="signup-link">Don't have an account? <Link to="/signup">Sign Up</Link></p>
+            {isLoading ? t('auth.logging_in') : t('auth.login_button')}
+          </button>
+          <p className="signup-link">
+            {t('auth.no_account')} <Link to="/signup">{t('auth.signup')}</Link>
+          </p>
       </form>
     </div>
   );
